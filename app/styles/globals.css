@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+	}
+	body {
+		@apply bg-[#282828] text-[#ffffff] tracking-wide
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-bold relative
+	}
+
+	h1 {
+		@apply text-3xl
+	}
+
+	h2 {
+		@apply text-2xl
+	}
+	
+	li {
+		@apply cursor-pointer
+	}
+
+}
