@@ -2,6 +2,8 @@
 
 This is a full stack example projuct using Anchor.
 
+![screenshot_20220703_233417](https://user-images.githubusercontent.com/38043930/177123525-15ea3933-e602-4375-bf4f-1fe92257cd24.png)
+
 ## Getting Started
 
 To deploy programs locally, you need to have the [Solana CLI](https://docs.solana.com/cli) . Please create a [File System Wallet](https://docs.solana.com/cli/conventions) before hand.
