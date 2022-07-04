@@ -25,7 +25,7 @@ yarn // install the dependencies for the root directory
 anchor build // build program
 ```
 
-The output of the terminal should say `**Program Id:** <PROGRAM_ID>`. Replace the current program id in `programs/project/src/lib.rs` and also in `Anchor.toml` and then run `anchor build` again.
+The output of the terminal should say `Program Id: <PROGRAM_ID>`. Replace the current program id in `programs/project/src/lib.rs` and also in `Anchor.toml` and then run `anchor build` again.
 
 Running a test validator
 ```
