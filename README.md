@@ -23,7 +23,22 @@ In a new terminal, navigate to the root directory
 yarn // install the dependencies for the root directory
 
 anchor build // build program
+```
 
+The output of the terminal should say `**Program Id:** <PROGRAM_ID>`. Replace the current program id in `programs/project/src/lib.rs` and also in `Anchor.toml` and then run `anchor build` again.
+
+Running a test validator
+```
+// Configure CLI Tool Suite to target a local cluster by default
+solana config set --url http://127.0.0.1:8899
+
+// Run a local test validator
+solana-test-validator
+```
+
+Now that we have a local validator spun up, time to deploy the program. In the root directory, run:
+
+```
 anchor deploy // deploys the programs to the local cluster
 ```
 
