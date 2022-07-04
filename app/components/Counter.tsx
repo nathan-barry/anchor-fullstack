@@ -10,10 +10,12 @@ const Counter: FC = () => {
   const [counterAddress, setCounterAddress] = useState<Keypair | null>(null);
   const [count, setCount] = useState<string | null>(null);
   const [input, setInput] = useState<number | null>(null);
-
+  
+  // generates a new keypair address to be used across each transaction 
   useEffect(() => {
     setCounterAddress(web3.Keypair.generate());
   }, []);
+  
   function getProvider() {
     if (!wallet) {
       return null;
@@ -22,13 +24,18 @@ const Counter: FC = () => {
     const network = "http:127.0.0.1:8899";
     const connection = new Connection(network, "processed");
 
-    // Don't understand the Provider error, would love to know why
     const provider = new AnchorProvider(connection, wallet, {
       preflightCommitment: "processed",
     });
     return provider;
   }
-
+  
+  /*
+  *   INTERACTING WITH PROGRAM FROM FRONTEND
+  *   Below are the functions that interacts with the on-chain program
+  *   For each buttion we have a different function that has a different instruction set.
+  */
+  
   async function initializeCounter() {
     const provider = getProvider();
     if (!provider) {
@@ -38,6 +45,7 @@ const Counter: FC = () => {
     const program = new Program(idl, idl.metadata.address, provider);
 
     try {
+      // this is how you interact with on-chain programs, same as when testing
       await program.methods
         .initialize()
         .accounts({
