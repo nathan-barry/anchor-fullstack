@@ -22,6 +22,8 @@ In a new terminal, navigate to the root directory
 ```
 yarn // install the dependencies for the root directory
 
+anchor build // build program
+
 anchor deploy // deploys the programs to the local cluster
 ```
 
