@@ -1,4 +1,4 @@
-# Anchor Dapp Example
+# Anchor Fullstack Template
 
 This is a full stack example projuct using Anchor.
 
